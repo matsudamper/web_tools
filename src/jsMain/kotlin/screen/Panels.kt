@@ -88,12 +88,15 @@ private fun Panel(
                     width(100.percent)
                 }
             }) {
-                TextInput(query.key) {
-                    style {
-
-                    }
-                    onInput {
-                        query.onKeyChange(it.value)
+                Div {
+                    TextInput(query.key) {
+                        style {
+                            fontSize(1.25.em)
+                            width(150.px)
+                        }
+                        onInput {
+                            query.onKeyChange(it.value)
+                        }
                     }
                 }
                 Div({
@@ -104,9 +107,10 @@ private fun Panel(
                 }) {
                     Text("=")
                 }
-                TextInput(query.value) {
+                TextArea(query.value) {
                     style {
                         flexGrow(1)
+                        fontSize(1.25.em)
                     }
                     onInput {
                         query.onValueChange(it.value)
