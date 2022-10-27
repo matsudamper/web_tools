@@ -2,7 +2,7 @@ package screen
 
 import androidx.compose.runtime.*
 import net.matsudamper.tools.web.compose.component.FlexColum
-import net.matsudamper.tools.web.compose.component.InfinityRow
+import net.matsudamper.tools.web.compose.component.ScrollableRow
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 
@@ -23,7 +23,7 @@ fun RootScreen(
             minHeight(100.percent)
         }
     }) {
-        InfinityRow {
+        ScrollableRow {
             Button(attrs = {
                 onClick { count -= 1 }
             }) {

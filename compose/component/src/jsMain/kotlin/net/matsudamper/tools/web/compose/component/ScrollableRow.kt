@@ -7,18 +7,24 @@ import org.jetbrains.compose.web.dom.ContentBuilder
 import org.jetbrains.compose.web.dom.Div
 import org.w3c.dom.HTMLDivElement
 
-
 @Composable
-fun FlexRow(
+fun ScrollableRow(
     attrs: AttrBuilderContext<HTMLDivElement>? = null,
     content: ContentBuilder<HTMLDivElement>,
 ) {
     Div({
-        attrs?.invoke(this)
         style {
+            overflowX("auto")
             display(DisplayStyle.Flex)
         }
     }) {
-        content()
+        Div({
+            attrs?.invoke(this)
+            style {
+                display(DisplayStyle.Flex)
+            }
+        }) {
+            content()
+        }
     }
 }

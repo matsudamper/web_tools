@@ -4,7 +4,7 @@ import androidx.compose.runtime.*
 import net.matsudamper.tools.web.compose.component.Box
 import net.matsudamper.tools.web.compose.component.FlexColum
 import net.matsudamper.tools.web.compose.component.FlexRow
-import net.matsudamper.tools.web.compose.component.InfinityRow
+import net.matsudamper.tools.web.compose.component.ScrollableRow
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import org.w3c.dom.HTMLDivElement
@@ -16,7 +16,7 @@ fun Panels(
     onClickAdd: () -> Unit,
 ) {
     val backgroundColor = Color.lightgray
-    InfinityRow({
+    ScrollableRow({
         style {
             minHeight(400.px)
         }
