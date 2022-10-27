@@ -3,5 +3,5 @@ package com.npmjs
 @JsModule("uuidjs")
 @JsNonModule
 external object UUID {
-    fun generate(): Any
+    fun generate(): String
 }
