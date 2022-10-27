@@ -1,8 +1,8 @@
 import org.jetbrains.compose.compose
 
 plugins {
-    kotlin("multiplatform") version "1.7.10"
-    id("org.jetbrains.compose") version "1.2.0"
+    kotlin("multiplatform")
+    id("org.jetbrains.compose")
 }
 
 group "net.matsudamper.tools.web"
