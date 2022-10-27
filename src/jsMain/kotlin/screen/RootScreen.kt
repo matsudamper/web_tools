@@ -1,12 +1,10 @@
 package screen
 
 import androidx.compose.runtime.*
-import net.matsudamper.tools.web.compose.component.Box
 import net.matsudamper.tools.web.compose.component.FlexColum
-import net.matsudamper.tools.web.compose.component.FlexRow
+import net.matsudamper.tools.web.compose.component.InfinityRow
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
-import org.w3c.dom.HTMLDivElement
 
 data class RootScreenUiState(
     val panelsUiStates: List<UrlEditPanelUiState>,
@@ -25,7 +23,7 @@ fun RootScreen(
             minHeight(100.percent)
         }
     }) {
-        FlexRow {
+        InfinityRow {
             Button(attrs = {
                 onClick { count -= 1 }
             }) {
