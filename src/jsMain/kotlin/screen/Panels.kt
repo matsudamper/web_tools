@@ -93,7 +93,7 @@ private fun Panel(
 
                     }
                     onInput {
-                        query.onValueChange(it.value)
+                        query.onKeyChange(it.value)
                     }
                 }
                 Div({
