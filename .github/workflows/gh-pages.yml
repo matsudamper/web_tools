@@ -39,14 +39,14 @@ jobs:
         uses: gradle/gradle-build-action@v2
       - name: Build
         run: |
-          ./gradlew jsBrowserWebpack
+          ./gradlew jsBrowserDevelopmentExecutableDistribution
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './build/distributions'
+          path: './build/developmentExecutable'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
