@@ -12,6 +12,7 @@ import org.w3c.dom.get
 import screen.DynamicLinkBuilderScreen
 import screen.RootScreenViewModel
 import net.matsudamper.tools.web.compose.root.RootScreen
+import net.matsudamper.tools.web.compose.root.RootViewModel
 import net.matsudamper.tools.web.compose.theme.LocalContentColor
 import net.matsudamper.tools.web.compose.theme.LocalSurfaceColor
 import net.matsudamper.tools.web.compose.theme.Theme
@@ -91,7 +92,10 @@ fun main() {
                         LaunchedEffect(Unit) {
                             isDarkMode = false
                         }
-                        RootScreen()
+                        val viewModel = remember { RootViewModel() }
+                        RootScreen(
+                            uiState = viewModel.uiStateFlow.collectAsState().value,
+                        )
                     }
                 }
             }

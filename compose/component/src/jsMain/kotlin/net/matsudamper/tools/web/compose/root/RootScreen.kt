@@ -1,8 +1,8 @@
 package net.matsudamper.tools.web.compose.root
 
 import androidx.compose.runtime.Composable
+import net.matsudamper.tools.web.compose.ImmutableList
 import net.matsudamper.tools.web.compose.component.FlexRow
-import net.matsudamper.tools.web.compose.component.Scaffold
 import net.matsudamper.tools.web.compose.modifier.padding
 import net.matsudamper.tools.web.compose.theme.LocalContentColor
 import org.jetbrains.compose.web.css.*
@@ -10,8 +10,19 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Span
 import org.jetbrains.compose.web.dom.Text
 
+data class RootScreenUiState(
+    val items: ImmutableList<Tool>
+) {
+    data class Tool(
+        val name: String,
+        val url: String,
+    )
+}
+
 @Composable
-fun RootScreen() {
+fun RootScreen(
+    uiState: RootScreenUiState
+) {
     Div({
         style {
             padding(horizontal = 10.percent)
