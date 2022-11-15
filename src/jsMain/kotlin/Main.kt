@@ -46,11 +46,10 @@ fun main() {
                     FlexRow(
                         attrs = {
                             style {
-                                height(50.px)
                                 backgroundColor(surfaceColor)
                                 property("box-shadow", "1px 1px transparent")
                                 color(textColor)
-                                padding(horizontal = 1.em)
+                                padding(horizontal = 1.em, vertical = 0.6.em)
                             }
                         },
                         alignContent = AlignContent.Center,
