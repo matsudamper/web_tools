@@ -3,6 +3,7 @@ import kotlinx.browser.document
 import net.matsudamper.tools.web.compose.component.FlexRow
 import net.matsudamper.tools.web.compose.component.Scaffold
 import net.matsudamper.tools.web.compose.component.ToggleButton
+import net.matsudamper.tools.web.compose.modifier.padding
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.renderComposableInBody
 import org.w3c.dom.HTMLBodyElement
@@ -45,10 +46,10 @@ fun main() {
                         attrs = {
                             style {
                                 height(50.px)
-                                width(100.percent)
                                 backgroundColor(surfaceColor)
                                 property("box-shadow", "1px 1px transparent")
                                 color(textColor)
+                                padding(horizontal = 1.em)
                             }
                         },
                         alignContent = AlignContent.Center,
