@@ -18,7 +18,7 @@ import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Input
-import screen.player.PlayerScreen
+import net.matsudamper.tools.web.screen.player.PlayerScreen
 
 fun main() {
     run {

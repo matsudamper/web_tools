@@ -1,4 +1,4 @@
-package screen.player
+package net.matsudamper.tools.web.screen.player
 
 import androidx.compose.runtime.Composable
 import kotlinx.browser.document
