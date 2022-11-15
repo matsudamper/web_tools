@@ -39,13 +39,16 @@ fun main() {
         Theme(isDarkMode = isDarkMode) {
             Scaffold(
                 topAppBar = {
+                    val textColor = LocalContentColor.current
+                    val surfaceColor = LocalSurfaceColor.current
                     FlexRow(
                         attrs = {
                             style {
                                 height(50.px)
                                 width(100.percent)
-                                backgroundColor(Color("#3c4043"))
+                                backgroundColor(surfaceColor)
                                 property("box-shadow", "1px 1px transparent")
+                                color(textColor)
                             }
                         },
                         alignContent = AlignContent.Center,

@@ -20,9 +20,9 @@ public fun Theme(
             Color.black
         },
         LocalSurfaceColor provides if (isDarkMode) {
-            Color.black
+            Color("#3c4043")
         } else {
-            Color.white
+            Color.cadetblue
         },
     ) {
         content()
