@@ -12,7 +12,7 @@ data class RootScreenUiState(
 )
 
 @Composable
-fun RootScreen(
+fun DynamicLinkBuilderScreen(
     uiState: RootScreenUiState
 ) {
     var count: Int by mutableStateOf(0)

@@ -83,7 +83,7 @@ private fun Panel(
             Text(uiState.name)
         }
         uiState.queries.forEach { query ->
-            FlexRow({
+            ScrollableRow({
                 style {
                     width(100.percent)
                 }
