@@ -37,7 +37,6 @@ fun RootScreen(
                 style {
                     width(100.percent)
                     minHeight(100.percent)
-                    backgroundColor(Color.green)
                 }
             },
             justifyContent = JustifyContent.SpaceBetween,
@@ -47,7 +46,7 @@ fun RootScreen(
                 style {
                     flexGrow(1f)
                     display(DisplayStyle.Block)
-                    padding(horizontal = 2.em, vertical = 2.em)
+                    padding(horizontal = 1.em, vertical = 1.em)
                     width(15.em)
                     height(15.em)
                 }
@@ -82,6 +81,8 @@ private fun ItemContent(
                 width(100.percent)
                 backgroundColor(Color.aliceblue)
                 textAlign("center")
+                property("box-shadow", "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)")
+                borderRadius(5.px)
             }
             onClick {
                 item.onClick()
